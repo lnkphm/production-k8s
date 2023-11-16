@@ -31,3 +31,21 @@ helm install ingress-nginx ingress-nginx/ingress-nginx -n ingress-nginx
 kubectl get deployment -n ingress-nginx
 kubectl get service -n ingress-nginx
 ```
+
+1. Upgrading chart
+
+```bash
+helm upgrade ingress-nginx ingress-nginx/ingress-nginx --install -n ingress-nginx
+```
+
+1. Uninstall chart
+
+```bash
+helm uninstall ingress-nginx -n ingress-nginx
+```
+
+1. Cleanup
+
+```bash
+kubectl delete -k ingress-nginx/
+```
